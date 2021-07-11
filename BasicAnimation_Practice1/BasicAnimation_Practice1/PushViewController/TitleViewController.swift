@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TitleViewController: UIViewController {
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var bodyTextView: UITextView!
@@ -29,17 +29,13 @@ class ViewController: UIViewController {
         bodyTextView.alpha = 0
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         showAnimation()
     }
 
     private func showAnimation() {
+        // 【メモ】animaitonつけない場合のコード
 //        self.titleLabelTopConstraint.constant += 250
 //        self.titleLabel.alpha = 1
 //        self.bodyTextViewTopConstraint.constant += 300
@@ -60,7 +56,7 @@ class ViewController: UIViewController {
                 self.view.layoutIfNeeded()
             } completion: { _ in
                 UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: []) {
-                    self.bodyTextViewTopConstraint.constant += 300
+                    self.bodyTextViewTopConstraint.constant += 350
                     self.bodyTextView.alpha = 1
                 } completion: { _ in
                     self.dismissAnimation()
@@ -72,14 +68,24 @@ class ViewController: UIViewController {
     private func dismissAnimation() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: []) {
-                self.titleLabelRightConstraint.constant -= 400
+                // 右にスライドしながら消えていく
+//                self.titleLabelRightConstraint.constant -= 400
+//                self.titleLabel.alpha = 0
+//                self.view.layoutIfNeeded()
+
+
                 self.titleLabel.alpha = 0
-                self.view.layoutIfNeeded()
             } completion: { _ in
                 UIView.animate(withDuration: 2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: []) {
-                    // これを入れると動きが悪くなる
+                    // これを入れると動きが悪くなる！？
 //                    self.bodyTextViewRightConstraint.constant -= 400
+                    // その場でフェードアウトしていくanimaiton
+//                    self.bodyTextView.alpha = 0
+
+
+                    self.bodyTextViewRightConstraint.constant -= 400
                     self.bodyTextView.alpha = 0
+                    self.view.layoutIfNeeded()
                 }
             }
         }
