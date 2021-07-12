@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2O2-0G-5Qp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tgk-fk-LKq">
+                                <rect key="frame" x="159.5" y="388" width="95" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN6-G3-sou">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                        <state key="normal" title="View Rotation"/>
+                                        <connections>
+                                            <segue destination="k9p-By-6av" kind="show" id="SQb-ei-q5C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyT-k3-Q8M">
+                                        <rect key="frame" x="0.0" y="30" width="95" height="30"/>
+                                        <state key="normal" title="Activity Ring"/>
+                                        <connections>
+                                            <segue destination="7RZ-FU-ghv" kind="show" id="56Y-7z-GC9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZe-xC-5K2">
+                                        <rect key="frame" x="0.0" y="60" width="95" height="30"/>
+                                        <state key="normal" title="FeedOut"/>
+                                        <connections>
+                                            <segue destination="AFp-83-w3e" kind="show" id="g8v-kf-IJJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-mG-sa5">
+                                        <rect key="frame" x="0.0" y="90" width="95" height="30"/>
+                                        <state key="normal" title="Original"/>
+                                        <connections>
+                                            <segue destination="B39-oI-bXd" kind="show" id="EaX-S2-jM1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tgk-fk-LKq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="E4h-Vn-Hkz"/>
+                            <constraint firstItem="tgk-fk-LKq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YP9-h7-S1L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Azq-eh-EL3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="842.02898550724649" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PCa-AL-2Qt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2O2-0G-5Qp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="62V-21-EkB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S3D-ds-PTX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi0-pI-iqd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="93.75"/>
+        </scene>
+        <!--Rotation-->
+        <scene sceneID="5gx-Ed-pah">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rotation" id="k9p-By-6av" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="xbU-2u-riX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkB-rP-Kgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-198"/>
+        </scene>
+        <!--ActivityRing-->
+        <scene sceneID="cPJ-uy-mHr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ActivityRing" id="7RZ-FU-ghv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UnU-2A-Hkv"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pL8-J1-1Vq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="9"/>
+        </scene>
+        <!--FeedOut-->
+        <scene sceneID="gPn-XM-Ufv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FeedOut" id="AFp-83-w3e" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TZR-vn-vbu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wq-Gq-7n5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="210"/>
+        </scene>
+        <!--Original-->
+        <scene sceneID="4XD-tj-3Qc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Original" id="B39-oI-bXd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Tm-SP-Oeg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="87W-RB-4bG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="402"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
