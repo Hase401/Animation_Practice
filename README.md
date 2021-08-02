@@ -2,7 +2,8 @@
 
 <p>【frameやbounds、CGRectなどの前提知識の理解】<br>
   ・<a href="https://yataiblue.hatenablog.com/entry/2015/03/19/000000" target="_blank"　rel="noopener noreferrer">Swiftで遊ぼう！ - 249 - iOSの座標システム</a><br>
-  ・<a href="https://qiita.com/mishimay/items/e9ecf3f352aad4433c24" target="_blank"　rel="noopener noreferrer">subview.frame = view.bounds よりも良い書き方</a>
+  ・<a href="https://qiita.com/mishimay/items/e9ecf3f352aad4433c24" target="_blank"　rel="noopener noreferrer">subview.frame = view.bounds よりも良い書き方</a><br>
+  ・<a href= "https://selection9.blogspot.com/2016/06/uiviewframebounds.html" target="_black" rel="noopener noreferrer">UIViewのframeとboundsプロパティの違いについて</a>
 </p>
 
 <p>【Animationの様々な方法を練習】<br>
